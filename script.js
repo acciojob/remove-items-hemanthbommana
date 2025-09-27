@@ -1,9 +1,13 @@
 //your JS code here. If required.
 
 let myFunction = ()=>{
-	let eve = document.getElementById('colorSelect').selectedIndex ;
-	if(eve != -1){
-		document.getElementById('colorSelect').remove(eve);
+	let select = document.getElementById("colorSelect");
+	let option = select.selectedIndex; // it will give you the index of the option
+
+	if(option >= 0){
+		select.remove(option);
 	}
+	
+	
 }
 document.getElementsByTagName('input')[0].addEventListener('click',myFunction);
